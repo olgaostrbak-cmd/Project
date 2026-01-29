@@ -1,0 +1,173 @@
+/* Базові налаштування для чистоти */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: black;
+    margin: 0;
+    padding: 20px;
+    background-color: lightblue;
+    /* Центрування контенту на великих екранах */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header,
+footer {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Логотип */
+.Epicenter {
+    transition: 0.4s linear;
+    cursor: pointer;
+}
+
+.Epicenter:hover {
+    /* Зменшено масштаб, щоб лого не закривало весь екран */
+    transform: scale(1.2); 
+}
+
+/* Навігація */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Щоб не ламалося на мобільних */
+    gap: 30px;
+    background-color: #89c4ffc8;
+    padding: 20px;
+    border-top: 3px solid #003366;
+    border-bottom: 3px solid #003366;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #003366;
+}
+
+/* Сітка товарів (Ключова зміна для вирівнювання) */
+.products-grid {
+    display: grid;
+    /* Автоматичне заповнення: мінімум 220px, максимум - на всю доступну ширину */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+article {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання всередині картки */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100%; /* Картки однакової висоти */
+}
+
+/* Контейнер для зображення, щоб вони не стрибали */
+.img-container {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.img-container img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+article h4 {
+    margin: 10px 0 20px 0; /* Відступ знизу для кнопки */
+    font-size: 16px;
+    flex-grow: 1; /* Штовхає кнопку вниз */
+}
+
+/* Стилізація кнопки */
+article .btn-details {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(41, 33, 48);
+    box-shadow: 3px 5px 0 0 orange;
+    background-color: lightblue;
+    border: 3px solid royalblue;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+article .btn-details:hover {
+    border: 3px dotted indigo; /* Виправлено синтаксис ком */
+    color: blueviolet;
+    box-shadow: 3px 5px 10px 0 gold;
+    transform: translateY(-2px); /* Легкий ефект підняття */
+}
+
+/* Галерея магазинів */
+.shops-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.shops-gallery img {
+    border-radius: 8px;
+    border: 3px solid white;
+}
+
+/* Футер */
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+footer img {
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+h1, h2, h3, p {
+    text-align: center;
+    color: #003366; /* Трохи темніший текст для кращого контрасту */
+}
